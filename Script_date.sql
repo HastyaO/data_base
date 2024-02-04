@@ -31,17 +31,17 @@ INSERT INTO album(name, release) VALUES
 	('Reise, Reise', '2004-07-07');	
 	
 
-INSERT INTO song(name,time) VALUES
-	('Crazy in Love', 220),
-	('Love the Way You Lie', 198),
-	('The Monster', 245),
-	('Jackson', 180),
-	('It Aint Me Babe', 213),
-	('Anything Goes', 192),
-	('I Cant Give You Anything But Love', 205),
-	('Du Hast', 228),
-	('Sonne', 250),
-	('Ich will', 201);
+INSERT INTO song(album_song_id,name,time) VALUES
+	(1,'Crazy in Love', 220),
+	(6,'Love the Way You Lie', 198),
+	(6,'The Monster', 245),
+	(6,'Jackson', 180),
+	(6,'It Aint Me Babe', 213),
+	(2, 'Anything Goes', 192),
+	(2,'I Cant Give You Anything But Love', 205),
+	(3, 'Du Hast', 228),
+	(4, 'Sonne', 250),
+	(5, 'Ich will', 201);
 
 
 INSERT INTO collection(name,release) VALUES
@@ -123,3 +123,5 @@ insert into song_collection(song_id, collection_id) values
 	(6,5),
 	(10,5);
 	
+INSERT INTO album(name, release) values
+	('unknown', '2000-01-01');
