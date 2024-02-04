@@ -20,7 +20,6 @@ create table if not exists genre_artist (
 
 create table if not exists album(
 	album_id serial primary key,
-	album_song_id integer not null references song(song_id),
 	name varchar(255) not null,
 	release date not null CHECK(release >= '1994-12-31'), 
 	UNIQUE(name)
@@ -36,6 +35,7 @@ create table if not exists artist_album (
 
 create table if not exists song (
 	song_id serial primary key,
+	album_song_id integer not null references album(album_id),
 	name varchar(255) not null,
 	time integer not null,
 	UNIQUE (name)
