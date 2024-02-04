@@ -6,7 +6,7 @@ CREATE TABLE if not exists genre (
 
 create table if not exists artist (
 	artist_id serial primary key,
-	name varchar(255) not null CHECK ,
+	name varchar(255) not null,
 	UNIQUE (name)
 );
 
@@ -19,10 +19,10 @@ create table if not exists genre_artist (
 );
 
 create table if not exists album(
-	album_id serial primarykey,
+	album_id serial primary key,
 	name varchar(255) not null,
-	release date not null CHECK(release>= 1995), 
-	UNIQUE (name)
+	release date not null CHECK(release >= '1994-12-31'), 
+	UNIQUE(name)
 );
 
 create table if not exists artist_album (
@@ -43,7 +43,7 @@ create table if not exists song (
 create table if not exists collection (
 	collection_id serial primary key,
 	name varchar(255) not null,
-	release date not null CHECK (release>= 1995),
+	release date not null CHECK (release >= '1994-12-31'),
 	UNIQUE (name, release)
 );
 
@@ -52,5 +52,5 @@ create table if not exists song_collection (
 	song_id integer not null,
 	collection_id integer not null,
 	constraint fk_song foreign key (song_id) references song(song_id) on delete cascade,
-	constraint fk_collection foreign key (collection_id) references collection(collection_id) on delete cascade,
+	constraint fk_collection foreign key (collection_id) references collection(collection_id) on delete cascade
 );
