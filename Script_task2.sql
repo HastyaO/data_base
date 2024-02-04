@@ -16,4 +16,4 @@ WHERE name not like '% %';
 
 --Название треков, которые содержат слово «мой» или «my»
 select name from song 
-WHERE name like '%мой%' or name like '%my%';
+WHERE name ilike '%мой%' or name ilike '%my%';

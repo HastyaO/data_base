@@ -125,3 +125,6 @@ insert into song_collection(song_id, collection_id) values
 	
 INSERT INTO album(name, release) values
 	('unknown', '2000-01-01');
+	
+INSERT INTO song(album_song_id,name, time) values
+	(6, 'You Are My Sunshine', 250);
