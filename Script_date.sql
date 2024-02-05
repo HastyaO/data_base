@@ -128,3 +128,35 @@ INSERT INTO album(name, release) values
 	
 INSERT INTO song(album_song_id,name, time) values
 	(6, 'You Are My Sunshine', 250);
+	
+INSERT INTO artist(name) values
+	('Многожанровый Мелодист'),
+	('Гармонийный Вариатор');
+	
+insert into genre_artist(genre_id, artist_id) values
+	(1,10),
+	(2,10),
+	(3,10),
+	(4,10),
+	(5,10),
+	(6,10),
+	(7,10),
+	(1,11),
+	(2,11),
+	(3,11),
+	(4,11),
+	(5,11),
+	(6,11),
+	(7,11);
+
+insert into album(name, release) values
+	('Rammstein','2019-05-17');
+
+
+insert into song(album_song_id,name, time) values
+	(7,'Deutschland', 300),
+	(7,'Ausländer',240);
+	
+	
+	
+	
